@@ -14,18 +14,40 @@ def checkOK():
             tmp2 = ser.readline()
             if tmp2 == b"ok\r\n":
                 flg = 0
+                print()
 
 
 def servoUp():
     data = b"M03 S0\r\n"
-    print("data")
+    print(data.strip().decode('utf-8'))
     ser.write(data)
     checkOK()
 
 
 def servoDown():
     data = b"M03 S1000\r\n"
-    print("data")
+    print(data.strip().decode('utf-8'))
+    ser.write(data)
+    checkOK()
+
+
+def axisX(coord):
+    data = b"G01 X" + coord.encode('utf-8') + b"\r\n"
+    print(data.strip().decode('utf-8'))
+    ser.write(data)
+    checkOK()
+
+
+def axisY(coord):
+    data = b"G01 Y" + coord.encode('utf-8') + b"\r\n"
+    print(data.strip().decode('utf-8'))
+    ser.write(data)
+    checkOK()
+
+
+def setZeroPosition():
+    data = b"G92 x0 y0 z0\r\n"
+    print(data.strip().decode('utf-8'))
     ser.write(data)
     checkOK()
 
