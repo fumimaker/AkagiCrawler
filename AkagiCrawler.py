@@ -4,6 +4,7 @@ import time
 ser = serial.Serial("/dev/cu.usbserial-30", 115200,
                    timeout = 30, parity=serial.PARITY_NONE)
 
+feedingSpeed = 3000
 
 def checkOK():
     flg = 1
@@ -32,15 +33,22 @@ def servoDown():
 
 
 def axisX(coord):
-    data = b"G01 X" + coord.encode('utf-8') + b"\r\n"
+    data = b"G01 X" + str(coord).encode('utf-8') + b" F" + \
+        str(feedingSpeed).encode('utf-8') + b"\r\n"
     print(data.strip().decode('utf-8'))
     ser.write(data)
     checkOK()
 
 
 def axisY(coord):
-    data = b"G01 Y" + coord.encode('utf-8') + b"\r\n"
-    print(data.strip().decode('utf-8'))
+    data = b"G01 Y" + str(coord).encode('utf-8') + b" F" + \
+        str(feedingSpeed).encode('utf-8') + b"\r\n"
+    ser.write(data)
+    checkOK()
+
+
+def move(x, y):
+    data = b"G01 X" + str(x).encode('utf-8') + b" Y" + str(y).encode('utf-8') + b" F" + str(feedingSpeed).encode('utf-8') + b"\r\n"
     ser.write(data)
     checkOK()
 
@@ -65,6 +73,12 @@ def main():
     time.sleep(1)
     servoDown()
     time.sleep(1)
+    move(10, 0)
+    move(10, 10)
+    move(0, 10)
+    move(0, 0)
+    setZeroPosition()
+    servoUp()
     ser.close()
 
 
