@@ -13,11 +13,8 @@ def get_locate_from_filename(filename):
         # フルカラーで検索(遅い)
         # locate = pg.locateCenterOnScreen(filename)
     return locate
-
+    
 
 if __name__ == "__main__":
-    print(pg.size())
-    button_position = get_locate_from_filename('offensive.png')
-    print(button_position)
-    practice_position = get_locate_from_filename('lv32.png')
-    print(practice_position)
+    pos_x, pos_y = get_locate_from_filename('origin.png')
+    print(pos_x, pos_y)
