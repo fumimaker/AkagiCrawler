@@ -1,5 +1,8 @@
 import serial
 import time
+import pyautogui
+import sys
+
 
 ser = serial.Serial("/dev/cu.usbserial-30", 115200,
                    timeout = 30, parity=serial.PARITY_NONE)
@@ -67,18 +70,12 @@ def main():
         if moji == b"Grbl 0.9i ['$' for help]\r\n":
             print(moji.strip().decode('utf-8'))
             flg = 0
-    time.sleep(1)
     print("Start")
     servoUp()
-    time.sleep(1)
     servoDown()
-    time.sleep(1)
-    move(10, 0)
-    move(10, 10)
-    move(0, 10)
-    move(0, 0)
     setZeroPosition()
     servoUp()
+    move(20,20)
     ser.close()
 
 
