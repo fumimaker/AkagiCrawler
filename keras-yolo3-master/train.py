@@ -1,7 +1,8 @@
 """
 Retrain the YOLO model for your own dataset.
 """
-
+import requests
+import json
 import numpy as np
 import keras.backend as K
 from keras.layers import Input, Lambda
@@ -13,6 +14,10 @@ from yolo3.model import preprocess_true_boxes, yolo_body, tiny_yolo_body, yolo_l
 from yolo3.utils import get_random_data
 import sys
 
+
+
+webhook_url = "https://hooks.slack.com/services/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"
+
 def _main():
     annotation_path = 'model_data/2007_train.txt'
     log_dir = 'logs/000/'
@@ -22,7 +27,7 @@ def _main():
     num_classes = len(class_names)
     anchors = get_anchors(anchors_path)
 
-    input_shape = (320,320) # multiple of 32, hw
+    input_shape = (512,512) # multiple of 32, hw
     if len(sys.argv) > 1:
         input_shape = (int(sys.argv[1]),int(sys.argv[1]))
 
@@ -32,7 +37,7 @@ def _main():
             freeze_body=2, weights_path='model_data/tiny_yolo_weights.h5')
     else:
         model = create_model(input_shape, anchors, num_classes,
-            freeze_body=2, weights_path='model_data/yolo_weights.h5') # make sure you know what you freeze
+            freeze_body=2, weights_path='./logs/000/ep048-loss20.455-val_loss17.581.h5') # make sure you know what you freeze
 
     logging = TensorBoard(log_dir=log_dir)
     checkpoint = ModelCheckpoint(log_dir + 'ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5',
@@ -49,6 +54,8 @@ def _main():
     num_val = int(len(lines)*val_split)
     num_train = len(lines) - num_val
 
+    text = "Training start."
+    requests.post(webhook_url, data=json.dumps({"text": text}))
     # Train with frozen layers first, to get a stable loss.
     # Adjust num epochs to your dataset. This step is enough to obtain a not bad model.
     if True:
@@ -56,7 +63,7 @@ def _main():
             # use custom yolo_loss Lambda layer.
             'yolo_loss': lambda y_true, y_pred: y_pred})
 
-        batch_size = 32
+        batch_size = 8
         if len(sys.argv) > 2:
             batch_size = int(sys.argv[2])
 
@@ -70,6 +77,8 @@ def _main():
                 callbacks=[logging, checkpoint])
         model.save_weights(log_dir + 'trained_weights_stage_1.h5')
 
+    text = "Unfreeze and continue training, to fine-tune."
+    requests.post(webhook_url, data=json.dumps({"text": text}))
     # Unfreeze and continue training, to fine-tune.
     # Train longer if the result is not good.
     if True:
@@ -78,7 +87,7 @@ def _main():
         model.compile(optimizer=Adam(lr=1e-4), loss={'yolo_loss': lambda y_true, y_pred: y_pred}) # recompile to apply the change
         print('Unfreeze all of the layers.')
 
-        batch_size = 32 # note that more GPU memory is required after unfreezing the body
+        batch_size = 8 # note that more GPU memory is required after unfreezing the body
         print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
         model.fit_generator(data_generator_wrapper(lines[:num_train], batch_size, input_shape, anchors, num_classes),
             steps_per_epoch=max(1, num_train//batch_size),
@@ -88,7 +97,9 @@ def _main():
             initial_epoch=50,
             callbacks=[logging, checkpoint, reduce_lr, early_stopping])
         model.save_weights(log_dir + 'trained_weights_final.h5')
-
+    
+    text = "Done"
+    requests.post(webhook_url, data=json.dumps({"text": text}))
     # Further training if needed.
 
 
@@ -138,7 +149,7 @@ def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze
     return model
 
 def create_tiny_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2,
-            weights_path='model_data/tiny_yolo_weights.h5'):
+            weights_path='model_data/yolo_weights.h5'):
     '''create the training model, for Tiny YOLOv3'''
     K.clear_session() # get a new session
     image_input = Input(shape=(None, None, 3))
