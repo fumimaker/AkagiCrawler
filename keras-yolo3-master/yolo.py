@@ -26,7 +26,7 @@ class YOLO(object):
         "classes_path": 'model_data/voc_classes.txt',
         "score" : 0.3,
         "iou" : 0.45,
-        "model_image_size" : (320, 320),
+        "model_image_size" : (512, 512),
         "gpu_num" : 1,
     }
 
