@@ -5,7 +5,7 @@
         "name": "picture",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMmU3NTZjNDhhNzQ5MzIxNWQ0NjBjMzZhZDNlNzI1ZjJkZjY2Njg5ZjQ2M2ZlZGIwODNmMDdhMmMzOGY3N2IzZWRjNjc3MWRlNGVmNGQ1YmE1YzVhMmY1NDZkNzExMzA1OGM2YjU3MDgxODM2NTYzZWM5ZTI5YjAxODA4ZGRkY2YiLCJpdiI6IjkwMjdhZGM2MmZiODZmOWRiNGY5Zjg0NTY5YWM3ZTE4YmQzZGI5ZjBjNGFhODI5ZCJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiOGE1MmZjZGU3MTUyNDZkYzYyM2Q2MDEzZTk2MDUzYjQ1N2FlN2U4NjI4ZDk3YjBhMWMzMGU0ZGIwZjAxMzcyMTZiYjZiYTNlMjEyYmJjZmI1MDllNzJkNjhhYzVmMzEwOTUzODA1NTdkZDA4Yjk2ZmIzOWIzZDg0ZjBkYWNmYTIiLCJpdiI6ImNlZmI1NjkzNTE3ZTRkNDFkMDI2NTA3NTZkMWJhY2Y1NmNkYjViMzM2NmViYWUzMiJ9"
         },
         "id": "BPLa3X3Tr"
     },
@@ -13,7 +13,7 @@
         "name": "target",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYzBkYjExYTdmYjJmMTZkMDJjM2MyYTMwNTQ0NGZjMzhmNzVlNzRmYzM5MzM3NTI4ODM2ZjU3NWRmYmRjM2E5ZjhkYjZkY2ViZDIyNDMyZmU4NGM0Y2IyODE0YmMyYzExODM0ZWE3OWFhY2U4MGIwMWUzZWY2MGIxNDg1ZTdiMTAiLCJpdiI6IjhlZGQ0MDNhYmI4MGI0MmY1NWJlOTA0NTQwMGE4MzBiYjFmYzdhNjM5ZmE1OWIxZiJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMGQ4OWE3ZjA3YzI2ZTg5ZDc5ODMyOWQ4Zjk0NjNlZmJjZDJlMjkxNTAyMDlmMzNkZTM4MWRjYWEyZjY4NjEzOTQzNTJjNGIyOTNjNTEyMTk2M2M0MWVmNTYwY2ZjY2VjNzZkMmM0MjgxZmRmYThhYTkxOTQyNzI4MTE3YmYwNjMiLCJpdiI6IjVmZjdhNzg2Yjc4NWZmZjI2NjMyNWEyNjM1NGMyNjZjYWY4ZDkzZjU5MWQ1ZDQxNCJ9"
         },
         "id": "R1ZRRT6Ut"
     },
@@ -47,24 +47,12 @@
     "exportFormat": {
         "providerType": "pascalVOC",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMmZjYWY5NDNkNDRkYTUwMDljYzk3ZTQ1ZDgzYzlhOTg5OThlNzE1NDViY2UxMDVmYmFiZjg4NWFkMThhNDAzOTRjMTUwZTE3MzE5ODA0YTZkYjM0NGE0NTNiMjQzMGFhOWQ4MTU5MWI3YzEwYjBiNDVhODRlNDBiNWQ3NThjNjI3Nzk0Yzc2NjM2ZjQyYWYzMTZiZWNjOGUwYjY4ODkxNiIsIml2IjoiMzUxNzcxNDk0NjliOTczNzZhYTZhMzdiNmIzNTg2YmM3MDk3MzEwNDJlNjZlZDE2In0="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiOTMwMWNiNTEwYjRjZThmNDljYTlmZDcxZjhkYzBlZGVlZGI4OTUzZGFkNmJhNzQyNWIxMmVhODgwMTYwNzk1YTA1NDY1YzgwMWIwN2I4YzNhODYwY2NhOGRiNThhMjAxMDEyOTVmNDE2Zjc5MjExOTM1MTdhMWZiMzFlZDBiNmM3MmU1YzBiYjM3NmVjOGY5YjVjYWQ1MmJkZTE0ODA3MyIsIml2IjoiYWRmMTI5MGI2MzdiMDhkNjYzYzI3MWQwNGU2MTNkMDIzNGUxZDBjNjk5YWFjNDJhIn0="
         }
     },
     "version": "2.1.0",
-    "lastVisitedAssetId": "0cfe4d29650b043fde4f356fa9fecc43",
+    "lastVisitedAssetId": "3ac71ba95d1bbcc50507d9e7fcdd67b0",
     "assets": {
-        "f53a961157444c4948fed174184f71c5": {
-            "format": "png",
-            "id": "f53a961157444c4948fed174184f71c5",
-            "name": "S.png",
-            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/S.png",
-            "size": {
-                "width": 338,
-                "height": 334
-            },
-            "state": 1,
-            "type": 1
-        },
         "174463510900425526f194af6002744d": {
             "format": "PNG",
             "id": "174463510900425526f194af6002744d",
@@ -940,18 +928,6 @@
             },
             "state": 2,
             "type": 1
-        },
-        "5cf05ade7190fd508c6370689741256b": {
-            "format": "MP4",
-            "id": "5cf05ade7190fd508c6370689741256b",
-            "name": "RPReplay_Final1582290863.MP4",
-            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/RPReplay_Final1582290863.MP4",
-            "size": {
-                "width": 1920,
-                "height": 888
-            },
-            "state": 2,
-            "type": 2
         },
         "19f695153f79d98cea6787479defc623": {
             "id": "19f695153f79d98cea6787479defc623",
