@@ -5,7 +5,7 @@
         "name": "picture",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYzljMzUxMzY5YmE1ZTYyNWJkNGI4YzhlM2E2ZTEwN2E2ZThiN2ZkMGU4NDU4N2VhYTFjZTFmMDkzMTg5NGI2YjMzMzA3NTM3YjJmYTI4M2I0NjE5MGNkMTM2MDU1NDRjMzI4OWY3YWFhMzU4YTczMmMyYzg0MDZlOTM2ODMwMWQiLCJpdiI6ImM5MjI0YmE1OWRhNmY0Y2Q3MDNmNzk4MmJlZGRhMjAzOWY1MWMyZGJhOGIyYzZhNiJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMmFmYWVmZjNlMGYyMjNiNTYzMTNjMzNiNGQzZjhlOTk2ODBhZWMzZGJiOWZiZTAwMjExZmZlNjc1NDYzNTgzNDFjZTcxNmMwNmM3YTNjZGYwNDI0OGRjZTQyM2NmZWM4NTU1NzY0OTExNmI3NjNjMjM2NTczMTcxZDlkOWZmMDIiLCJpdiI6IjU0ODNiYmM3YjhhMDRiNzc0MzFjYmJkZjYwNWIwOTY2YjY3MTM2Y2RjNDgzYjNmMyJ9"
         },
         "id": "BPLa3X3Tr"
     },
@@ -13,7 +13,7 @@
         "name": "target",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMmJiNjRiZDcxNTRmYTk5NjU3ODIwMTBiYzEwNzU2NDk1ZmI2MWI2NzJkNjQ2MzVlYTc5ZTY4MGM5NDZlZmMzZGYyZDNmZTk5NGNmMDA3Y2M0ZjZlYTRhYTYyYTcwOGQyZTQ2NDY5MTRiMzMyOWM4NzMyZDIyZDRhOTQyNThiOWMiLCJpdiI6IjMzYjdhNDhiYzNjOTc0YTljNDhhOGJmZmI1OTUzZDViNmZhMjM3MzU2YjViNzgwNSJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYTM3ZTIzZWY1Zjk2ODBlMWY3Nzg4MzdhOTdkYTRiZjgwMGJmMTg3Y2Q2M2JlOTE3NTU0NjEzOTExMmE1NzZhZTRmOWM5Y2NhZmVlMzZlYjFmNmY4MmY2MGUxNDE3ZTFiNTJjY2FjMjA1YjNmY2U2ZTA4NWY4NzdmNTk1MGI1NjIiLCJpdiI6IjRjNTU3MzRiZDI4ODgyZWZhNDQ3ZWU5NWI4YTJlODQyNWRjNjQwM2MzNzAzMjQwYyJ9"
         },
         "id": "R1ZRRT6Ut"
     },
@@ -47,7 +47,7 @@
     "exportFormat": {
         "providerType": "pascalVOC",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiY2ZhNjdmNTE5OTQyODkyM2FiMzQ5NGQwYzRkNjI5MjczNGEwYTI3NjgwOWM1ZDEyNTNiYTRmODJjNDhkMDgxNGY2ZTZkYWQ2M2ZjMWViNzk0OTFkNmIzOTkwNWU1ODYxMjQxNDBjMmUyN2NjZDMzZDdkM2Y1ZDJkZmE4NzA5ZjRmMDliNmU2YTc2MGI1MTY1MmFhN2NkMTc1N2EwYTYwMCIsIml2IjoiNjRiMjI2YzI2NWY0NWMyMDk3MzVhODAyYTVhZmFlODBjMjU5OGViNzU5NmNmNmFlIn0="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNjgyMTAzNDllMjY0ZWRiNGVhN2Q3YWY2NzUwMGFiODc3MzAxZmZhNDM4YmUzMDhmNjQ2ZGMzODZjMDVhMWUzYTRhZWVhYmNjOTg3MWEwMjRiYjc1Y2Y1OTJkNzE0ZGMzZDM4ZDlmODE0ZWVmOTYxZTdlNDNkODg0YWZiODZiMDExODNiMWIwNDViZWU2YmIwNWVhNmMwNDU4YzhiNzlkYSIsIml2IjoiMzAyNTgyNzQ5MjY5ODkzYzMwOWQ2M2FjMzgzMGYyMzk0OTljNmUwNzRkMmJiMTJjIn0="
         }
     },
     "version": "2.1.0",
@@ -1289,31 +1289,6 @@
                 "type": 2
             },
             "timestamp": 6
-        },
-        "3c768f7b80b29076d9f0643720b3568e": {
-            "id": "3c768f7b80b29076d9f0643720b3568e",
-            "format": "066667",
-            "state": 1,
-            "type": 3,
-            "name": "RPReplay_Final1582290863.MP4#t=6.066667",
-            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/RPReplay_Final1582290863.MP4#t=6.066667",
-            "size": {
-                "width": 1920,
-                "height": 888
-            },
-            "parent": {
-                "format": "MP4",
-                "id": "5cf05ade7190fd508c6370689741256b",
-                "name": "RPReplay_Final1582290863.MP4",
-                "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/RPReplay_Final1582290863.MP4",
-                "size": {
-                    "width": 1920,
-                    "height": 888
-                },
-                "state": 2,
-                "type": 2
-            },
-            "timestamp": 6.066667
         },
         "f8c809b5107f62c8952792fcdbf7977c": {
             "id": "f8c809b5107f62c8952792fcdbf7977c",
