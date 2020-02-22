@@ -1,0 +1,61 @@
+{
+    "asset": {
+        "id": "747ed264a2435c1bcebd0b4628c7ef67",
+        "format": "2",
+        "state": 2,
+        "type": 3,
+        "name": "RPReplay_Final1582290863.MP4#t=16.2",
+        "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/RPReplay_Final1582290863.MP4#t=16.2",
+        "size": {
+            "width": 1920,
+            "height": 888
+        },
+        "parent": {
+            "format": "MP4",
+            "id": "5cf05ade7190fd508c6370689741256b",
+            "name": "RPReplay_Final1582290863.MP4",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/RPReplay_Final1582290863.MP4",
+            "size": {
+                "width": 1920,
+                "height": 888
+            },
+            "state": 2,
+            "type": 2
+        },
+        "timestamp": 16.2
+    },
+    "regions": [
+        {
+            "id": "F4U3fJeqd",
+            "type": "RECTANGLE",
+            "tags": [
+                "boss"
+            ],
+            "boundingBox": {
+                "height": 155.39999999999998,
+                "width": 176.5966831333804,
+                "left": 1546.1856033874383,
+                "top": 481.1500477099236
+            },
+            "points": [
+                {
+                    "x": 1546.1856033874383,
+                    "y": 481.1500477099236
+                },
+                {
+                    "x": 1722.7822865208186,
+                    "y": 481.1500477099236
+                },
+                {
+                    "x": 1722.7822865208186,
+                    "y": 636.5500477099237
+                },
+                {
+                    "x": 1546.1856033874383,
+                    "y": 636.5500477099237
+                }
+            ]
+        }
+    ],
+    "version": "2.1.0"
+}
