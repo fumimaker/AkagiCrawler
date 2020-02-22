@@ -1,0 +1,26 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>RPReplay_Final1582290863.MP4#t=10.666667.jpg</filename>
+    <path>akagi-PascalVOC-export/Annotations/RPReplay_Final1582290863.MP4#t=10.666667.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1920</width>
+        <height>888</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>boss</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>1099.3401552575865</xmin>
+        <ymin>558.5217080152671</ymin>
+        <xmax>1262.0059985885675</xmax>
+        <ymax>718.8044370229006</ymax>
+    </bndbox>
+</object>
+</annotation>

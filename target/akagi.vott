@@ -5,7 +5,7 @@
         "name": "picture",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMzMwYzZlMWJkMzNhNGM4ZGIyODk0MjVjYjRiZGVjOWUyMjUxNGJhZGM4NTQ0OGMxMzdiMTc3ODgwY2YwZWQ1YmQ3OTNkODgwMGFjMTg1OWJlMTlkYmRhNmVlNWVmYzM2NDBmODdmZjc0YTI4ODEzYjI1YWZmOTQ5OTU2YzY3NzQiLCJpdiI6IjRhMGUxZTI2MmZiOWM1ZDY2OTI2MzAxYjJlYjUzNzcyMzZlZjJkYzFiZTQ3YmVlMyJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMmU3NTZjNDhhNzQ5MzIxNWQ0NjBjMzZhZDNlNzI1ZjJkZjY2Njg5ZjQ2M2ZlZGIwODNmMDdhMmMzOGY3N2IzZWRjNjc3MWRlNGVmNGQ1YmE1YzVhMmY1NDZkNzExMzA1OGM2YjU3MDgxODM2NTYzZWM5ZTI5YjAxODA4ZGRkY2YiLCJpdiI6IjkwMjdhZGM2MmZiODZmOWRiNGY5Zjg0NTY5YWM3ZTE4YmQzZGI5ZjBjNGFhODI5ZCJ9"
         },
         "id": "BPLa3X3Tr"
     },
@@ -13,7 +13,7 @@
         "name": "target",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMDllZGZhZDA4OTE4NmY2ZGM1Y2MzNDBmNWIzMmQ1YTgzNTk2NTYyOTRhYzRjNjE2ZGY3YzM0YWFmYzQ1ZWFkYjlkNTE1ZjQzNmNlMDk4NjA3NzFlODM5NTBkMGY5YTk2ZTFjYWY3MWZhOTlmOTA4YWJiNTQ5MmViODVkMWNiNGIiLCJpdiI6ImJhZWJiMzRiYjA3N2ZiZDQ5ZjNlZDhhMmM3NjQ3NWE5YWE4MGIxNzEzZTU2MjExZSJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYzBkYjExYTdmYjJmMTZkMDJjM2MyYTMwNTQ0NGZjMzhmNzVlNzRmYzM5MzM3NTI4ODM2ZjU3NWRmYmRjM2E5ZjhkYjZkY2ViZDIyNDMyZmU4NGM0Y2IyODE0YmMyYzExODM0ZWE3OWFhY2U4MGIwMWUzZWY2MGIxNDg1ZTdiMTAiLCJpdiI6IjhlZGQ0MDNhYmI4MGI0MmY1NWJlOTA0NTQwMGE4MzBiYjFmYzdhNjM5ZmE1OWIxZiJ9"
         },
         "id": "R1ZRRT6Ut"
     },
@@ -42,12 +42,12 @@
     "activeLearningSettings": {
         "modelPathType": "coco",
         "autoDetect": false,
-        "predictTag": true
+        "predictTag": false
     },
     "exportFormat": {
-        "providerType": "vottJson",
+        "providerType": "pascalVOC",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNmYxMzM2MDkwNWNjMGNmYzA3YTU4YTYzNzBiZjdjNWM3NDI2NDJmYzJmZGU5YWJiOTRmYWQ3NzYyYzc3YzAyNzA0NTIzNDg4MGI5MmUyY2M0N2UwNzkyODY0M2I3MTg1IiwiaXYiOiI3MDcwNWZjYzkwNDEwY2U1OGYwZGExMjg0YjRkMTkzYTY5OWMwODRhMzAzZGJkOWUifQ=="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMmZjYWY5NDNkNDRkYTUwMDljYzk3ZTQ1ZDgzYzlhOTg5OThlNzE1NDViY2UxMDVmYmFiZjg4NWFkMThhNDAzOTRjMTUwZTE3MzE5ODA0YTZkYjM0NGE0NTNiMjQzMGFhOWQ4MTU5MWI3YzEwYjBiNDVhODRlNDBiNWQ3NThjNjI3Nzk0Yzc2NjM2ZjQyYWYzMTZiZWNjOGUwYjY4ODkxNiIsIml2IjoiMzUxNzcxNDk0NjliOTczNzZhYTZhMzdiNmIzNTg2YmM3MDk3MzEwNDJlNjZlZDE2In0="
         }
     },
     "version": "2.1.0",

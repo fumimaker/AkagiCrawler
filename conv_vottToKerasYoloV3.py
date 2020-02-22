@@ -62,8 +62,8 @@ def convert_vott_to_kerasyolo3txt(json_path, image_dir, train_txt_save_path, cla
 
 
 def _main():
-    json_path = '../resize_images.json'  # VoTTのアノテーション情報が記録されたjsonファイルのパス
-    image_dir = '../resize_images/'  # 画像が保存されたディレクトリのパス
+    json_path = './target/akagi.json'  # VoTTのアノテーション情報が記録されたjsonファイルのパス
+    image_dir = './picture/'  # 画像が保存されたディレクトリのパス
     # keras-yolo3で学習に使うアノテーション用のテキストファイルの保存先のパス
     train_txt_save_path = 'my_train.txt'
     # keras-yolo3で学習に使うラベル用のテキストファイルの保存先のパス
