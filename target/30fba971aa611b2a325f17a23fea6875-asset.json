@@ -1,0 +1,49 @@
+{
+    "asset": {
+        "format": "PNG",
+        "id": "30fba971aa611b2a325f17a23fea6875",
+        "name": "IMG_3013.PNG",
+        "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3013.PNG",
+        "size": {
+            "width": 512,
+            "height": 237
+        },
+        "state": 2,
+        "type": 1,
+        "predicted": true
+    },
+    "regions": [
+        {
+            "id": "WyrBW1JrH",
+            "type": "RECTANGLE",
+            "tags": [
+                "lv3"
+            ],
+            "boundingBox": {
+                "height": 48.45472935267857,
+                "width": 48.873449131513645,
+                "left": 291.6923076923077,
+                "top": 97.73439592633929
+            },
+            "points": [
+                {
+                    "x": 291.6923076923077,
+                    "y": 97.73439592633929
+                },
+                {
+                    "x": 340.56575682382135,
+                    "y": 97.73439592633929
+                },
+                {
+                    "x": 340.56575682382135,
+                    "y": 146.18912527901784
+                },
+                {
+                    "x": 291.6923076923077,
+                    "y": 146.18912527901784
+                }
+            ]
+        }
+    ],
+    "version": "2.1.0"
+}

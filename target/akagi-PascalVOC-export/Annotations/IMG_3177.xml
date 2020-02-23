@@ -11,5 +11,16 @@
         <depth>3</depth>
     </size>
     <segmented>0</segmented>
-    
+    <object>
+    <name>boss</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>181.77847851793456</xmin>
+        <ymin>108.30694340928449</ymin>
+        <xmax>224.44461962948364</xmax>
+        <ymax>153.01019151937817</ymax>
+    </bndbox>
+</object>
 </annotation>

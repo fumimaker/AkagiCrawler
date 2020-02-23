@@ -11,5 +11,49 @@
         <depth>3</depth>
     </size>
     <segmented>0</segmented>
-    
+    <object>
+    <name>lv1</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>182.87983425414365</xmin>
+        <ymin>105.11209771455223</ymin>
+        <xmax>225.542817679558</xmax>
+        <ymax>147.74777868470147</ymax>
+    </bndbox>
+</object><object>
+    <name>lv2</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>225.27624309392263</xmin>
+        <ymin>76.91445895522388</ymin>
+        <xmax>268.60911602209944</xmax>
+        <ymax>114.09493936567164</ymax>
+    </bndbox>
+</object><object>
+    <name>lv2</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>268.3881215469613</xmin>
+        <ymin>106.10696711753731</ymin>
+        <xmax>310.5331491712707</xmax>
+        <ymax>150.49057835820895</ymax>
+    </bndbox>
+</object><object>
+    <name>lv1</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>309.6270718232044</xmin>
+        <ymin>76.24706739738805</ymin>
+        <xmax>352.6671270718232</xmax>
+        <ymax>117.2121968283582</ymax>
+    </bndbox>
+</object>
 </annotation>
