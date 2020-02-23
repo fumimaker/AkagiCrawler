@@ -11,5 +11,27 @@
         <depth>3</depth>
     </size>
     <segmented>0</segmented>
-    
+    <object>
+    <name>boss</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>180.19198895027623</xmin>
+        <ymin>199.228125</ymin>
+        <xmax>231.2389502762431</xmax>
+        <ymax>237</ymax>
+    </bndbox>
+</object><object>
+    <name>lv2</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>18.468232044198896</xmin>
+        <ymin>91.76979361007463</ymin>
+        <xmax>64.8342541436464</xmax>
+        <ymax>133.93567513992537</ymax>
+    </bndbox>
+</object>
 </annotation>
