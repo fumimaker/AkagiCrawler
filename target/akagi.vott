@@ -5,7 +5,7 @@
         "name": "picture",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiOGE1MmZjZGU3MTUyNDZkYzYyM2Q2MDEzZTk2MDUzYjQ1N2FlN2U4NjI4ZDk3YjBhMWMzMGU0ZGIwZjAxMzcyMTZiYjZiYTNlMjEyYmJjZmI1MDllNzJkNjhhYzVmMzEwOTUzODA1NTdkZDA4Yjk2ZmIzOWIzZDg0ZjBkYWNmYTIiLCJpdiI6ImNlZmI1NjkzNTE3ZTRkNDFkMDI2NTA3NTZkMWJhY2Y1NmNkYjViMzM2NmViYWUzMiJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMzU1MTQzNDI3NjNjZDgxMGYxMWU0ZDJjMTNmMmZmMjBmNzQ1ZDg2ZjVlZWQ4YjY0YTRjZTcyYTYxMWM2ODAxMzM5Y2I1YzIwMGI5NjFlNjcwNjI3OGYzMmJkMWVjNmQ3MzcyMDhlMzZmZWM0MjFlNzJjNGMyNzkxYzgzMzlkODciLCJpdiI6ImEwY2RhM2M0M2UzZDkxMTdjZGQ2YTc4NTRjM2M3YjFhYWU4ZjJmNzliODI4ZmY2NSJ9"
         },
         "id": "BPLa3X3Tr"
     },
@@ -13,7 +13,7 @@
         "name": "target",
         "providerType": "localFileSystemProxy",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMGQ4OWE3ZjA3YzI2ZTg5ZDc5ODMyOWQ4Zjk0NjNlZmJjZDJlMjkxNTAyMDlmMzNkZTM4MWRjYWEyZjY4NjEzOTQzNTJjNGIyOTNjNTEyMTk2M2M0MWVmNTYwY2ZjY2VjNzZkMmM0MjgxZmRmYThhYTkxOTQyNzI4MTE3YmYwNjMiLCJpdiI6IjVmZjdhNzg2Yjc4NWZmZjI2NjMyNWEyNjM1NGMyNjZjYWY4ZDkzZjU5MWQ1ZDQxNCJ9"
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiYzJkMjA1ZWRiMjgzOGQxYzFkODk3NWZlYzVmYzdjM2RkN2IxOWZhM2ZlZWFmODNlNDJiYzc1ODI4ZDBlM2ZiMDE3MWU2YTdlZmZkNTYzZTc3MmM1MDY5YmExYWE0YjM0NGQ3MGU4MTY1NWFlMjFhZTI3ZDc4NmE1MzBmNjg3MzMiLCJpdiI6IjJiYWU0ZjkyYmZjNjMzMWY2MGVjMmY1Y2I5Y2UxNDZjNjJiMjI1OTBjN2NmYzg0NSJ9"
         },
         "id": "R1ZRRT6Ut"
     },
@@ -47,11 +47,11 @@
     "exportFormat": {
         "providerType": "pascalVOC",
         "providerOptions": {
-            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiOTMwMWNiNTEwYjRjZThmNDljYTlmZDcxZjhkYzBlZGVlZGI4OTUzZGFkNmJhNzQyNWIxMmVhODgwMTYwNzk1YTA1NDY1YzgwMWIwN2I4YzNhODYwY2NhOGRiNThhMjAxMDEyOTVmNDE2Zjc5MjExOTM1MTdhMWZiMzFlZDBiNmM3MmU1YzBiYjM3NmVjOGY5YjVjYWQ1MmJkZTE0ODA3MyIsIml2IjoiYWRmMTI5MGI2MzdiMDhkNjYzYzI3MWQwNGU2MTNkMDIzNGUxZDBjNjk5YWFjNDJhIn0="
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMGRmZDc5MzBjZjQ3NDAzMjlhZGEyZGY0MTczNzQ5YjIwYmYyMjYwYjZiNjhiODU3NzVlZDA4ZTY2ZmMwYmViYmRkZWQ2NzUwNGE1Y2ZkMTRkNTVjYzZlMjFiYTY3YzhiMTlkYjRkMDM1NTQ4N2Q5Yzk4MzY0OTIxZDI4NWU0NmQwOWQwNDc3OWE3NjEyMzE2MWVjMTk2MDI3OTJmZmYzOSIsIml2IjoiZDJhNjgwNDE5YmE1MTY4MzQxODg4NTkyOTIyYWQwNzE1NjEzNjhlZTU0OTc5ZmM1In0="
         }
     },
     "version": "2.1.0",
-    "lastVisitedAssetId": "3ac71ba95d1bbcc50507d9e7fcdd67b0",
+    "lastVisitedAssetId": "6070f68753ad938b8093a3b6d9386d94",
     "assets": {
         "174463510900425526f194af6002744d": {
             "format": "PNG",
@@ -3892,6 +3892,594 @@
             "id": "83a76409040b7abeac649e4a53772134",
             "name": "IMG_3233.PNG",
             "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3233.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f6b2aef736ee8230b701955cfc39682a": {
+            "format": "PNG",
+            "id": "f6b2aef736ee8230b701955cfc39682a",
+            "name": "IMG_3261.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3261.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b0191aa5ed64ddb71c41e839e5696509": {
+            "format": "PNG",
+            "id": "b0191aa5ed64ddb71c41e839e5696509",
+            "name": "IMG_3262.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3262.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3fb48d81c0a5b76765727158227d108d": {
+            "format": "PNG",
+            "id": "3fb48d81c0a5b76765727158227d108d",
+            "name": "IMG_3263.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3263.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3fa874516ba19c442cf08416f3612097": {
+            "format": "PNG",
+            "id": "3fa874516ba19c442cf08416f3612097",
+            "name": "IMG_3264.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3264.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f9e23b1a849187c1ffa458ccca1dfb1f": {
+            "format": "PNG",
+            "id": "f9e23b1a849187c1ffa458ccca1dfb1f",
+            "name": "IMG_3265.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3265.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "fde7ea16fa4da41c48e46cbb44f05e62": {
+            "format": "PNG",
+            "id": "fde7ea16fa4da41c48e46cbb44f05e62",
+            "name": "IMG_3266.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3266.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "28617345214a7777cf2812f8422dcfb4": {
+            "format": "PNG",
+            "id": "28617345214a7777cf2812f8422dcfb4",
+            "name": "IMG_3267.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3267.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b24f6a7c5f618d6065e582d2980cba84": {
+            "format": "PNG",
+            "id": "b24f6a7c5f618d6065e582d2980cba84",
+            "name": "IMG_3268.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3268.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "086a3feffb8a2be37ae93c387923e271": {
+            "format": "PNG",
+            "id": "086a3feffb8a2be37ae93c387923e271",
+            "name": "IMG_3269.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3269.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "793943e0b01392e2bb20d321922e8daf": {
+            "format": "PNG",
+            "id": "793943e0b01392e2bb20d321922e8daf",
+            "name": "IMG_3270.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3270.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f16886b8ac6c0ad4c3677ed48f6faaa6": {
+            "format": "PNG",
+            "id": "f16886b8ac6c0ad4c3677ed48f6faaa6",
+            "name": "IMG_3271.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3271.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "10913a2431c8f77768830adadfea998e": {
+            "format": "PNG",
+            "id": "10913a2431c8f77768830adadfea998e",
+            "name": "IMG_3272.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3272.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4ddcd8f485d2cf04b36205533fdccf54": {
+            "format": "PNG",
+            "id": "4ddcd8f485d2cf04b36205533fdccf54",
+            "name": "IMG_3273.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3273.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9ffa783283a5abf1eee908ae14ec6974": {
+            "format": "PNG",
+            "id": "9ffa783283a5abf1eee908ae14ec6974",
+            "name": "IMG_3274.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3274.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a617a81e73bcc853ef64d23caa64e052": {
+            "format": "PNG",
+            "id": "a617a81e73bcc853ef64d23caa64e052",
+            "name": "IMG_3275.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3275.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "51b6944959d1e4e03c32418fdeaadbcd": {
+            "format": "PNG",
+            "id": "51b6944959d1e4e03c32418fdeaadbcd",
+            "name": "IMG_3276.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3276.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6bed8f4c9c2d25f1ccb29f06eb960ef7": {
+            "format": "PNG",
+            "id": "6bed8f4c9c2d25f1ccb29f06eb960ef7",
+            "name": "IMG_3277.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3277.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "00fb0c783b6f018b0147b4f39bb950a9": {
+            "format": "PNG",
+            "id": "00fb0c783b6f018b0147b4f39bb950a9",
+            "name": "IMG_3278.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3278.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a9ab09017d1bffe5a0a30758a05979cc": {
+            "format": "PNG",
+            "id": "a9ab09017d1bffe5a0a30758a05979cc",
+            "name": "IMG_3279.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3279.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4d9271df6ddd63c93f854eb9741e52b9": {
+            "format": "PNG",
+            "id": "4d9271df6ddd63c93f854eb9741e52b9",
+            "name": "IMG_3280.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3280.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1d34228bb53f0f4a2b6e885e43304f4d": {
+            "format": "PNG",
+            "id": "1d34228bb53f0f4a2b6e885e43304f4d",
+            "name": "IMG_3281.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3281.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a87e9d5099cdafb58c01f91ba0d70bc7": {
+            "format": "PNG",
+            "id": "a87e9d5099cdafb58c01f91ba0d70bc7",
+            "name": "IMG_3282.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3282.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3593792ca31b96708a13462362bc3075": {
+            "format": "PNG",
+            "id": "3593792ca31b96708a13462362bc3075",
+            "name": "IMG_3283.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3283.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3835282d5ed986bc6602bdc010f23a58": {
+            "format": "PNG",
+            "id": "3835282d5ed986bc6602bdc010f23a58",
+            "name": "IMG_3284.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3284.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "e34722a15c4e508836ecf7bf7de68436": {
+            "format": "PNG",
+            "id": "e34722a15c4e508836ecf7bf7de68436",
+            "name": "IMG_3285.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3285.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "44afd001f7c847f093753cdfcc05e65b": {
+            "format": "PNG",
+            "id": "44afd001f7c847f093753cdfcc05e65b",
+            "name": "IMG_3286.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3286.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "942e813e7aadc95f4cc8673757296a71": {
+            "format": "PNG",
+            "id": "942e813e7aadc95f4cc8673757296a71",
+            "name": "IMG_3287.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3287.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "7e82b56a0273ecd3b022d4e59d040c3f": {
+            "format": "PNG",
+            "id": "7e82b56a0273ecd3b022d4e59d040c3f",
+            "name": "IMG_3288.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3288.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b257cf06d6edb34c08a85b695bcf9be6": {
+            "format": "PNG",
+            "id": "b257cf06d6edb34c08a85b695bcf9be6",
+            "name": "IMG_3289.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3289.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "8ab553d5a4236a9a5878393299200990": {
+            "format": "PNG",
+            "id": "8ab553d5a4236a9a5878393299200990",
+            "name": "IMG_3290.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3290.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "19292e30285b00226edcce449db5ab77": {
+            "format": "PNG",
+            "id": "19292e30285b00226edcce449db5ab77",
+            "name": "IMG_3291.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3291.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f90c10eb9d936a575e587fe2536faad7": {
+            "format": "PNG",
+            "id": "f90c10eb9d936a575e587fe2536faad7",
+            "name": "IMG_3292.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3292.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "0dfbceb2e7b274fc8ea2d247c6ae8f76": {
+            "format": "PNG",
+            "id": "0dfbceb2e7b274fc8ea2d247c6ae8f76",
+            "name": "IMG_3293.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3293.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "e6347650967a1bd1d9652d5385be86af": {
+            "format": "PNG",
+            "id": "e6347650967a1bd1d9652d5385be86af",
+            "name": "IMG_3294.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3294.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5c8db199a4807448312a4acc99990ec9": {
+            "format": "PNG",
+            "id": "5c8db199a4807448312a4acc99990ec9",
+            "name": "IMG_3295.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3295.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "dbb6023ece762754f19fe10c2b42e80d": {
+            "format": "PNG",
+            "id": "dbb6023ece762754f19fe10c2b42e80d",
+            "name": "IMG_3296.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3296.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "391111643c442d408172dcc47e45aaba": {
+            "format": "PNG",
+            "id": "391111643c442d408172dcc47e45aaba",
+            "name": "IMG_3297.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3297.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "30ea3ed36185e6ac519c61abfd2bfb5c": {
+            "format": "PNG",
+            "id": "30ea3ed36185e6ac519c61abfd2bfb5c",
+            "name": "IMG_3298.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3298.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "22a8cff4fbd4b9ce82995252050eb459": {
+            "format": "PNG",
+            "id": "22a8cff4fbd4b9ce82995252050eb459",
+            "name": "IMG_3299.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3299.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f280983fe4fb5d5a6ad8b56fd227ea4e": {
+            "format": "PNG",
+            "id": "f280983fe4fb5d5a6ad8b56fd227ea4e",
+            "name": "IMG_3300.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3300.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "43f934f51bb23e0fc4e87d7f23a949a4": {
+            "format": "PNG",
+            "id": "43f934f51bb23e0fc4e87d7f23a949a4",
+            "name": "IMG_3301.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3301.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "574af1e615146a87a5233fc5ccbfdfd8": {
+            "format": "PNG",
+            "id": "574af1e615146a87a5233fc5ccbfdfd8",
+            "name": "IMG_3302.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3302.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "48feeaed578eabf7f9b655cb5987822d": {
+            "format": "PNG",
+            "id": "48feeaed578eabf7f9b655cb5987822d",
+            "name": "IMG_3303.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3303.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "481e7cf151bf692cb38ed8833fead3f2": {
+            "format": "PNG",
+            "id": "481e7cf151bf692cb38ed8833fead3f2",
+            "name": "IMG_3304.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3304.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6656de8e341649ba8db57902c8f44137": {
+            "format": "PNG",
+            "id": "6656de8e341649ba8db57902c8f44137",
+            "name": "IMG_3305.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3305.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "42a46b0d7f6ee2537f72c90f2ae065a9": {
+            "format": "PNG",
+            "id": "42a46b0d7f6ee2537f72c90f2ae065a9",
+            "name": "IMG_3306.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3306.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a39dc85d9b3eeb04394ed2b86fdc51c2": {
+            "format": "PNG",
+            "id": "a39dc85d9b3eeb04394ed2b86fdc51c2",
+            "name": "IMG_3307.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3307.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5fb043634d9bf988f55661a4a3bb0c75": {
+            "format": "PNG",
+            "id": "5fb043634d9bf988f55661a4a3bb0c75",
+            "name": "IMG_3308.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3308.PNG",
+            "size": {
+                "width": 512,
+                "height": 237
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6070f68753ad938b8093a3b6d9386d94": {
+            "format": "PNG",
+            "id": "6070f68753ad938b8093a3b6d9386d94",
+            "name": "IMG_3309.PNG",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/IMG_3309.PNG",
             "size": {
                 "width": 512,
                 "height": 237

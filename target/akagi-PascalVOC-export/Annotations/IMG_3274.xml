@@ -1,0 +1,48 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>IMG_3274.PNG</filename>
+    <path>akagi-PascalVOC-export/Annotations/IMG_3274.PNG</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>512</width>
+        <height>237</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>lv1</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>250.50650477016478</xmin>
+        <ymin>109.2040466994382</ymin>
+        <xmax>296.4111014744146</xmax>
+        <ymax>152.9272735252809</ymax>
+    </bndbox>
+</object><object>
+    <name>lv3</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>336.22723330442324</xmin>
+        <ymin>108.59206021769663</ymin>
+        <xmax>383.43104943625326</xmax>
+        <ymax>152.72790115870785</ymax>
+    </bndbox>
+</object><object>
+    <name>lv3</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>330.87944492627923</xmin>
+        <ymin>52.44013342696629</ymin>
+        <xmax>373.2627927146574</xmax>
+        <ymax>93.5819215238764</ymax>
+    </bndbox>
+</object>
+</annotation>
