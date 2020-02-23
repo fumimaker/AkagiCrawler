@@ -15,8 +15,7 @@ from yolo3.utils import get_random_data
 import sys
 
 
-
-webhook_url = "https://hooks.slack.com/services/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"
+webhook_url = "https://hooks.slack.com/services/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"
 
 def _main():
     annotation_path = 'model_data/2007_train.txt'

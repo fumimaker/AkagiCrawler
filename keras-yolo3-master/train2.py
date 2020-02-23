@@ -15,7 +15,7 @@ from yolo3.utils import get_random_data
 import sys
 
 
-webhook_url = "https://hooks.slack.com/services/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"
+webhook_url = "https://hooks.slack.com/services/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"
 
 
 def _main():
@@ -37,7 +37,7 @@ def _main():
                                   freeze_body=2, weights_path='model_data/tiny_yolo_weights.h5')
     else:
         model = create_model(input_shape, anchors, num_classes,
-                             freeze_body=2, weights_path='./logs/000/ep048-loss20.455-val_loss17.581.h5')  # make sure you know what you freeze
+                             freeze_body=2, weights_path='model_data/yolo_weights.h5')  # make sure you know what you freeze
 
     logging = TensorBoard(log_dir=log_dir)
     checkpoint = ModelCheckpoint(log_dir + 'ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5',
