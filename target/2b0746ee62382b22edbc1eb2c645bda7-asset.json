@@ -1,0 +1,96 @@
+{
+    "asset": {
+        "id": "2b0746ee62382b22edbc1eb2c645bda7",
+        "format": "2",
+        "state": 2,
+        "type": 3,
+        "name": "RPReplay_Final1582344053.mov#t=12.2",
+        "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/RPReplay_Final1582344053.mov#t=12.2",
+        "size": {
+            "width": 720,
+            "height": 332
+        },
+        "parent": {
+            "format": "mov",
+            "id": "806bbfa2a9e04f48885fffc0965ccddf",
+            "name": "RPReplay_Final1582344053.mov",
+            "path": "file:/Users/fumi/GitHub/AkagiCrawler/picture/RPReplay_Final1582344053.mov",
+            "size": {
+                "width": 720,
+                "height": 332
+            },
+            "state": 1,
+            "type": 2
+        },
+        "timestamp": 12.2
+    },
+    "regions": [
+        {
+            "id": "pWFZp2Vi_",
+            "type": "RECTANGLE",
+            "tags": [
+                "lv3"
+            ],
+            "boundingBox": {
+                "height": 60.13648378759399,
+                "width": 67.66085355285962,
+                "left": 222.41659445407277,
+                "top": 116.28727091165413
+            },
+            "points": [
+                {
+                    "x": 222.41659445407277,
+                    "y": 116.28727091165413
+                },
+                {
+                    "x": 290.0774480069324,
+                    "y": 116.28727091165413
+                },
+                {
+                    "x": 290.0774480069324,
+                    "y": 176.42375469924812
+                },
+                {
+                    "x": 222.41659445407277,
+                    "y": 176.42375469924812
+                }
+            ]
+        },
+        {
+            "id": "DtfZTvQrk",
+            "type": "POLYGON",
+            "tags": [
+                "boss"
+            ],
+            "boundingBox": {
+                "height": 61.27003054511278,
+                "width": 62.579343587521656,
+                "left": 345.6742850953206,
+                "top": 168.1086407424812
+            },
+            "points": [
+                {
+                    "x": 345.6742850953206,
+                    "y": 168.1086407424812
+                },
+                {
+                    "x": 346.0837305025996,
+                    "y": 229.378671287594
+                },
+                {
+                    "x": 408.25362868284225,
+                    "y": 225.02243890977445
+                },
+                {
+                    "x": 407.6248375216637,
+                    "y": 171.88956766917295
+                },
+                {
+                    "x": 345.8497616984402,
+                    "y": 168.64006696428572
+                }
+            ]
+        }
+    ],
+    "version": "2.1.0"
+}
