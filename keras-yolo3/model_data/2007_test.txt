@@ -1,0 +1,36 @@
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3233.PNG 224,157,267,194,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3227.PNG 374,117,419,151,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3225.PNG 146,122,193,168,1 194,91,238,132,2 236,122,282,169,2 237,38,277,75,1 409,121,460,166,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3229.PNG 433,165,486,204,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3226.PNG 235,116,276,149,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3230.PNG 388,115,434,149,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3229.PNG 433,165,486,204,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3222.PNG 180,199,231,237,3 18,91,64,133,1
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3227.PNG 374,117,419,151,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3227.PNG 374,117,419,151,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3232.PNG 253,187,302,229,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3226.PNG 235,116,276,149,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3225.PNG 146,122,193,168,1 194,91,238,132,2 236,122,282,169,2 237,38,277,75,1 409,121,460,166,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3223.PNG 183,106,226,153,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3224.PNG 262,108,312,151,3 94,105,140,151,2 60,75,102,116,2
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3224.PNG 262,108,312,151,3 94,105,140,151,2 60,75,102,116,2
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3223.PNG 183,106,226,153,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3222.PNG 180,199,231,237,3 18,91,64,133,1
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3226.PNG 235,116,276,149,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3229.PNG 433,165,486,204,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3231.PNG 252,114,300,152,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3229.PNG 433,165,486,204,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3221.PNG 57,127,102,172,1 107,97,151,138,2 145,127,193,176,2 157,42,201,84,1 322,129,372,172,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3226.PNG 235,116,276,149,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3223.PNG 183,106,226,153,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3222.PNG 180,199,231,237,3 18,91,64,133,1
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3233.PNG 224,157,267,194,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3231.PNG 252,114,300,152,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3222.PNG 180,199,231,237,3 18,91,64,133,1
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3223.PNG 183,106,226,153,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3233.PNG 224,157,267,194,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3230.PNG 388,115,434,149,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3228.PNG 237,185,283,227,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3221.PNG 57,127,102,172,1 107,97,151,138,2 145,127,193,176,2 157,42,201,84,1 322,129,372,172,3
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3224.PNG 262,108,312,151,3 94,105,140,151,2 60,75,102,116,2
+/Users/fumi/GitHub/AkagiCrawler/keras-yolo3-master/VOCDevkit/VOC2007/JPEGImages/IMG_3221.PNG 57,127,102,172,1 107,97,151,138,2 145,127,193,176,2 157,42,201,84,1 322,129,372,172,3

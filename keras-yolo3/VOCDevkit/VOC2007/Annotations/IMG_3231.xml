@@ -1,0 +1,26 @@
+<annotation verified="yes">
+    <folder>Annotation</folder>
+    <filename>IMG_3231.PNG</filename>
+    <path>akagi-PascalVOC-export/Annotations/IMG_3231.PNG</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>512</width>
+        <height>237</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+    <name>boss</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+        <xmin>252.88455008488964</xmin>
+        <ymin>114.61171875000001</ymin>
+        <xmax>300.1120543293718</xmax>
+        <ymax>152.69615108944956</ymax>
+    </bndbox>
+</object>
+</annotation>
