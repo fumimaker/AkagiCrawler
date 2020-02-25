@@ -18,6 +18,8 @@ from yolo3.utils import letterbox_image
 import os
 from keras.utils import multi_gpu_model
 
+import cv2
+
 class YOLO(object):
     _defaults = {
         # "model_path": 'model_data/yolo.h5',
@@ -151,7 +153,6 @@ class YOLO(object):
             }
             crop_data_list.append(crop_dict)
         
-
         for i, c in reversed(list(enumerate(out_classes))):
             predicted_class = self.class_names[c]
             box = out_boxes[i]
@@ -183,11 +184,10 @@ class YOLO(object):
                 fill=self.colors[c])
             draw.text(text_origin, label, fill=(0, 0, 0), font=font)
             del draw
-
         end = timer()
         print(end - start)
         # return image
-        return crop_data_list
+        return image, crop_data_list
     def close_session(self):
         self.sess.close()
 
