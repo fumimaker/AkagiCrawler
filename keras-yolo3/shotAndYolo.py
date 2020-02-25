@@ -10,14 +10,13 @@ from objects import get_objects_information
 
 
 if __name__ == '__main__':
+    yolo = YOLO()
     sc = pyautogui.screenshot()
     sc = sc.convert("RGB")
     sc.save("shot.jpg")
     img = cv2.imread("shot.jpg")
     img2 = img[45: 1595, 0: 3360]
     cv2.imwrite("croped.jpg", img2)
-
-    yolo = YOLO()
     image_path = "croped.jpg"
     objects_info_list = get_objects_information(yolo, image_path)
     yolo.close_session()

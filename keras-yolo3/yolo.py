@@ -26,7 +26,7 @@ class YOLO(object):
         "model_path": './model_data/trained_weights_final.h5',
         "anchors_path": './model_data/yolo_anchors.txt',
         "classes_path": './model_data/voc_classes.txt',
-        "score" : 0.3,
+        "score" : 0.6,
         "iou" : 0.45,
         "model_image_size" : (512, 512),
         "gpu_num" : 1,
@@ -187,7 +187,7 @@ class YOLO(object):
         end = timer()
         print(end - start)
         # return image
-        return image, crop_data_list
+        return crop_data_list
     def close_session(self):
         self.sess.close()
 

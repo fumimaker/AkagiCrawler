@@ -8,7 +8,7 @@ def get_objects_information(yolo, image_path):
             raise FileNotFoundError
         image = Image.open(image_path)
         print("file opened.")
-        img, dictionary = yolo.detect_image(image)
+        dictionary = yolo.detect_image(image)
         # img.show()
         return dictionary
     except FileNotFoundError:

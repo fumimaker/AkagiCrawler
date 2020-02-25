@@ -3,22 +3,40 @@ import time
 import pyautogui
 import sys
 import math
-
+import cv2
+from PIL import Image
+from yolo import YOLO
+import os
+from objects import get_objects_information
 
 feedingSpeed = 2500
+
+#debug = False
 debug = True
 ser = None
+'''
 origin = [252, 167]
 stageSelect = [1763, 918]
 syutsugeki = [2348, 1170]
 fleetSelect = [2624, 1357]
-
-pixelRatio = 22.4
-
+'''
+origin = [125, 83]
+stageSelect = [800, 450]
+syutsugeki = [1176, 584]
+fleetSelect = [1315,680]
+# pixelRatio = 22.4
+pixelRatio = 11.3
+displayScale = 0.58333
 
 def debugMode():
     while True:
         print(pyautogui.position())
+    x, y = detectEnemy()
+    _list = [ x * displayScale, y * displayScale]
+    print(_list)
+    touch(_list)
+    move(0, 0)
+    
 
 def checkOK():
     flg = 1
@@ -104,6 +122,45 @@ def get_locate_from_filename(filename):
     return locate
 
 
+def detectEnemy():
+    yolo = YOLO()
+    sc = pyautogui.screenshot()
+    sc = sc.convert("RGB")
+    sc.save("shot.jpg")
+    img = cv2.imread("shot.jpg")
+    img2 = img[45: 1595, 0: 3360]
+    cv2.imwrite("croped.jpg", img2)
+    image_path = "croped.jpg"
+    objects_info_list = get_objects_information(yolo, image_path)
+    yolo.close_session()
+    img = Image.open(image_path)
+    _gx = []
+    _gy = []
+    counter = 0
+    for object_info in objects_info_list:
+        class_name = object_info['predicted_name']
+        x = object_info['x']
+        y = object_info['y']
+        width = object_info['width']
+        height = object_info['height']
+        _gx.append(x+width/2)
+        _gy.append(y+height/2)
+        print("{} x:{} y:{} height:{} width:{} center:{},{}".format(
+            class_name, x, y, height, width, _gx[counter], _gy[counter]))
+        counter += 1
+    max = 0
+    index = 0
+    counter = 0
+    for i in _gx:
+        if i > max:
+            max = i
+            index = counter
+        counter += 1
+    dic = objects_info_list[index]
+    x = dic["x"]+(dic["width"]/2)
+    y = dic["y"]+(dic["height"]/2)
+    return x, y
+
 def main():
     flg = 1
     while flg:
@@ -118,6 +175,10 @@ def main():
     touch(syutsugeki)
     touch(fleetSelect)
     move(0, 0)
+    x, y = detectEnemy()
+    _list = [x * displayScale, y * displayScale]
+    print(_list)
+    touch(_list)
     ser.close()
 
 
@@ -127,4 +188,6 @@ if __name__ == '__main__':
                             timeout=30, parity=serial.PARITY_NONE)
         main()
     else:
+        ser = serial.Serial("/dev/cu.usbserial-30", 115200,
+                            timeout=30, parity=serial.PARITY_NONE)
         debugMode()
