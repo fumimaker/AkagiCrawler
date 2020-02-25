@@ -131,6 +131,27 @@ class YOLO(object):
                     size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))
         thickness = (image.size[0] + image.size[1]) // 300
 
+        crop_data_list = []
+        if len(out_boxes) == 0:
+            print('Objects are not found.')
+            return crop_data_list
+
+        for i, c in enumerate(out_classes):
+            box = out_boxes[i]
+            top, left, bottom, right = box
+            width = right - left
+            height = bottom - top
+            predicted_name = self.class_names[c]
+            crop_dict = {
+                'x': left,
+                'y': top,
+                'width': width,
+                'height': height,
+                'predicted_name': predicted_name,
+            }
+            crop_data_list.append(crop_dict)
+        
+
         for i, c in reversed(list(enumerate(out_classes))):
             predicted_class = self.class_names[c]
             box = out_boxes[i]
@@ -165,8 +186,8 @@ class YOLO(object):
 
         end = timer()
         print(end - start)
-        return image
-
+        # return image
+        return crop_data_list
     def close_session(self):
         self.sess.close()
 

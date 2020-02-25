@@ -29,6 +29,8 @@ if __name__ == '__main__':
         y = object_info['y']
         width = object_info['width']
         height = object_info['height']
+        print("{} x:{} y:{} height:{} width:{}".format(class_name, x, y, height, width))
+        
         cropped_img = img.crop((x, y, x + width, y + height))
-        cropped_img.save("./picture/{}{}.jpg".format(class_name, count))
+        cropped_img.save("./pic/{}{}.jpg".format(class_name, count))
         count = count + 1

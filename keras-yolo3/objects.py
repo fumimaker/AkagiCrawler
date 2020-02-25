@@ -13,4 +13,3 @@ def get_objects_information(yolo, image_path):
         print("The Image file isn't found. Check the image file path.")
     except IOError:
         print('Image open Error. Try again.')
-
