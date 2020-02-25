@@ -4,12 +4,10 @@ import pyautogui
 import sys
 import math
 
-ser = serial.Serial("/dev/cu.usbserial-30", 115200,
-                    timeout=30, parity=serial.PARITY_NONE)
 
 feedingSpeed = 2500
-
-
+debug = True
+ser = None
 origin = [252, 167]
 stageSelect = [1763, 918]
 syutsugeki = [2348, 1170]
@@ -17,6 +15,10 @@ fleetSelect = [2624, 1357]
 
 pixelRatio = 22.4
 
+
+def debugMode():
+    while True:
+        print(pyautogui.position())
 
 def checkOK():
     flg = 1
@@ -115,31 +117,14 @@ def main():
     touch(stageSelect)
     touch(syutsugeki)
     touch(fleetSelect)
-    try:
-        pos_x, pos_y = get_locate_from_filename('triangle1.png')
-        touch(pos_x, pos_y)
-    except:
-        try:
-            pos_x, pos_y = get_locate_from_filename('triangle2.png')
-            touch(pos_x, pos_y)
-        except:
-            try:
-                pos_x, pos_y = get_locate_from_filename('triangle3.png')
-                touch(pos_x, pos_y)
-            except:
-                try:
-                    pos_x, pos_y = get_locate_from_filename('triangle4.png')
-                    touch(pos_x, pos_y)
-                except:
-                    try:
-                        pos_x, pos_y = get_locate_from_filename('triangle5.png')
-                        touch(pos_x, pos_y)
-                    except:
-                        move(0, 0)
-                        pass
     move(0, 0)
     ser.close()
 
 
 if __name__ == '__main__':
-    main()
+    if not debug:
+        ser = serial.Serial("/dev/cu.usbserial-30", 115200,
+                            timeout=30, parity=serial.PARITY_NONE)
+        main()
+    else:
+        debugMode()
