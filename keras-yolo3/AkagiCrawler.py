@@ -10,9 +10,10 @@ import os
 from objects import get_objects_information
 
 feedingSpeed = 2500
+connect = "/dev/cu.usbserial-130"
 
-#debug = False
-debug = True
+debug = False
+#debug = True
 ser = None
 '''
 origin = [252, 167]
@@ -20,23 +21,39 @@ stageSelect = [1763, 918]
 syutsugeki = [2348, 1170]
 fleetSelect = [2624, 1357]
 '''
+screenSize = []
 origin = [125, 83]
 stageSelect = [800, 450]
 syutsugeki = [1176, 584]
-fleetSelect = [1315,680]
+fleetSelect = [1315, 680]
+hensei = [1467, 714]
+kaihi = [1385, 536]
+touchany = [500, 500]
+confirm = [1323, 738]
+
 # pixelRatio = 22.4
 pixelRatio = 11.3
 displayScale = 0.58333
 
 def debugMode():
-    while True:
-        print(pyautogui.position())
+    '''
     x, y = detectEnemy()
-    _list = [ x * displayScale, y * displayScale]
+    _list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
     print(_list)
     touch(_list)
     move(0, 0)
-    
+    '''
+    locale = get_locate_from_filename("azurenImg/machibuse.png")
+    if locale == None:
+        touch(hensei)
+    else:
+        touch(kaihi)
+    move(0, 0)
+
+def scalingAndOffset(cord):
+    _x, _y = cord
+    _list = [(_x-origin[0])*displayScale, (_y-origin[1])*displayScale]
+    return _list
 
 def checkOK():
     flg = 1
@@ -94,6 +111,9 @@ def setZeroPosition():
 
 
 def touch(coord):
+    _x = coord[0]
+    _y = coord[1]
+    print("touch X:{:.2f} Y:{:.2f}".format(_x, _y))
     _x = (coord[0] - origin[0]) / pixelRatio
     _y = (coord[1] - origin[1]) / pixelRatio
 
@@ -101,6 +121,7 @@ def touch(coord):
     _x = math.floor(_x * 10 ** n) / (10 ** n)
     _y = -1 * math.floor(_y * 10 ** n) / (10 ** n)
     move(_x, _y)
+    
     servoDown()
     servoUp()
 
@@ -108,17 +129,21 @@ def touch(coord):
 def get_locate_from_filename(filename):
     locate = None
     times = 0
-    while locate == None:
-        time.sleep(0.1)
+    flag = True
+    while flag:
+        time.sleep(1)
         # グレイスケールで検索(95%一致で判定)
         locate = pyautogui.locateCenterOnScreen(
-            filename, grayscale=True, confidence=0.2)
+            filename, grayscale=True, confidence=0.9)
         # フルカラーで検索(遅い)
         # locate = pg.locateCenterOnScreen(filename)
         times += 1
+        if not locate == None:
+            flag = False
         if times > 5:
-            locate = 1
-
+            locate = None
+            flag = False
+    print("Detect image. {}".format(locate))
     return locate
 
 
@@ -171,23 +196,52 @@ def main():
     print("Akagi Crawler Start")
     servoUp()
     setZeroPosition()
+    print("ステージセレクト")
     touch(stageSelect)
+    print("出撃確認")
     touch(syutsugeki)
+    print("艦隊選択")
     touch(fleetSelect)
     move(0, 0)
+    print("teki")
     x, y = detectEnemy()
-    _list = [x * displayScale, y * displayScale]
-    print(_list)
+    _list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
+    print("Enemy detected. Touch X:{:.2f} Y:{:.2f}".format(_list[0], _list[1]))
     touch(_list)
+    locale = get_locate_from_filename("azurenImg/machibuse.png") # 敵艦みゆ
+    if locale == None:
+        touch(hensei)
+    else:
+        touch(kaihi)
+
+    locale = get_locate_from_filename("azurenImg/contact.png")
+    if locale == None: # 敵をタッチできていない リトライ
+        x, y = detectEnemy()
+        _list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
+        print("Enemy detected. Touch X:{:.2f} Y:{:.2f}".format(_list[0], _list[1]))
+        touch(_list)
+    else: # 戦闘開始確認
+        move(0, 0)
+
+    while get_locate_from_filename("azurenImg/victory.png")==None:
+        print("waiting for victory...")
+        time.sleep(1)
+    touch(touchany) # 完全勝利確認
+    time.sleep(1)
+    touch(touchany) # アイテム入手確認
+    time.sleep(2)
+    touch(confirm)
+
+    move(0, 0)
     ser.close()
 
 
 if __name__ == '__main__':
     if not debug:
-        ser = serial.Serial("/dev/cu.usbserial-30", 115200,
+        ser = serial.Serial(connect, 115200,
                             timeout=30, parity=serial.PARITY_NONE)
         main()
     else:
-        ser = serial.Serial("/dev/cu.usbserial-30", 115200,
+        ser = serial.Serial(connect, 115200,
                             timeout=30, parity=serial.PARITY_NONE)
         debugMode()
