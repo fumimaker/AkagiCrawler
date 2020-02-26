@@ -9,8 +9,8 @@ from yolo import YOLO
 import os
 from objects import get_objects_information
 
-feedingSpeed = 2500
-connect = "/dev/cu.usbserial-130"
+feedingSpeed = 3000
+connect = "/dev/cu.usbserial-30"
 
 debug = False
 #debug = True
@@ -21,7 +21,7 @@ stageSelect = [1763, 918]
 syutsugeki = [2348, 1170]
 fleetSelect = [2624, 1357]
 '''
-screenSize = []
+
 origin = [125, 83]
 stageSelect = [800, 450]
 syutsugeki = [1176, 584]
@@ -34,6 +34,8 @@ confirm = [1323, 738]
 # pixelRatio = 22.4
 pixelRatio = 11.3
 displayScale = 0.58333
+
+yolo = YOLO()
 
 def debugMode():
     '''
@@ -69,6 +71,7 @@ def checkOK():
 
 def servoUp():
     data = b"M03 S0\r\n"
+    print("Servo UP")
     print(data.strip().decode('utf-8'))
     ser.write(data)
     checkOK()
@@ -76,6 +79,7 @@ def servoUp():
 
 def servoDown():
     data = b"M03 S1000\r\n"
+    print("Servo Down")
     print(data.strip().decode('utf-8'))
     ser.write(data)
     checkOK()
@@ -134,7 +138,7 @@ def get_locate_from_filename(filename):
         time.sleep(1)
         # グレイスケールで検索(95%一致で判定)
         locate = pyautogui.locateCenterOnScreen(
-            filename, grayscale=True, confidence=0.9)
+            filename, grayscale=True, confidence=0.9, region=(0, 25, 2880, 1371))
         # フルカラーで検索(遅い)
         # locate = pg.locateCenterOnScreen(filename)
         times += 1
@@ -148,7 +152,7 @@ def get_locate_from_filename(filename):
 
 
 def detectEnemy():
-    yolo = YOLO()
+    
     sc = pyautogui.screenshot()
     sc = sc.convert("RGB")
     sc.save("shot.jpg")
@@ -157,7 +161,7 @@ def detectEnemy():
     cv2.imwrite("croped.jpg", img2)
     image_path = "croped.jpg"
     objects_info_list = get_objects_information(yolo, image_path)
-    yolo.close_session()
+    
     img = Image.open(image_path)
     _gx = []
     _gy = []
@@ -184,9 +188,12 @@ def detectEnemy():
     dic = objects_info_list[index]
     x = dic["x"]+(dic["width"]/2)
     y = dic["y"]+(dic["height"]/2)
-    return x, y
+    name = dic["predicted_name"]
+    return x-20, y, name
+
 
 def main():
+    
     flg = 1
     while flg:
         moji = ser.readline()
@@ -203,36 +210,56 @@ def main():
     print("艦隊選択")
     touch(fleetSelect)
     move(0, 0)
-    print("teki")
-    x, y = detectEnemy()
-    _list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
-    print("Enemy detected. Touch X:{:.2f} Y:{:.2f}".format(_list[0], _list[1]))
-    touch(_list)
-    locale = get_locate_from_filename("azurenImg/machibuse.png") # 敵艦みゆ
-    if locale == None:
-        touch(hensei)
-    else:
-        touch(kaihi)
 
-    locale = get_locate_from_filename("azurenImg/contact.png")
-    if locale == None: # 敵をタッチできていない リトライ
-        x, y = detectEnemy()
+    completed = False
+    while not completed:
+        time.sleep(5)
+        print("Yolo: 検出開始")
+        x, y, name = detectEnemy()
         _list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
-        print("Enemy detected. Touch X:{:.2f} Y:{:.2f}".format(_list[0], _list[1]))
+        print("{} detected. Touch X:{:.2f} Y:{:.2f}".format(name, _list[0], _list[1]))
         touch(_list)
-    else: # 戦闘開始確認
-        move(0, 0)
+        locale = get_locate_from_filename("azurenImg/machibuse.png")  # 敵艦みゆ
+        if locale == None:
+            print("敵艦遭遇なし")
+            print("出撃")
+            touch(hensei)
+        else:
+            print("敵艦見ゆ")
+            print("回避")
+            touch(kaihi)
 
-    while get_locate_from_filename("azurenImg/victory.png")==None:
-        print("waiting for victory...")
+        locale = get_locate_from_filename("azurenImg/contact.png")
+        if locale == None:  # 敵をタッチできていない リトライ
+            print("タッチ失敗，リトライ")
+            x, y, name = detectEnemy()
+            _list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
+            print("Enemy detected. Touch X:{:.2f} Y:{:.2f}".format(
+                _list[0], _list[1]))
+            touch(_list)
+        else:  # 戦闘開始確認
+            print("戦闘開始確認ヨシ")
+            move(0, 0)
+
+        while get_locate_from_filename("azurenImg/victory.png") == None:
+            print("waiting for victory...")
+            time.sleep(1)
+        print("戦闘終了確認")
+        touch(touchany)  # 完全勝利確認
         time.sleep(1)
-    touch(touchany) # 完全勝利確認
-    time.sleep(1)
-    touch(touchany) # アイテム入手確認
-    time.sleep(2)
-    touch(confirm)
-
-    move(0, 0)
+        print("アイテム入手確認")
+        touch(touchany)  # アイテム入手確認
+        time.sleep(2)
+        print("End")
+        touch(confirm)
+        move(0, 0)
+        if name == "boss":
+            completed = True
+            print("ボス撃破，終了")
+        else:
+            print("{} 撃破".format(name))
+            print("敵検索継続")
+    yolo.close_session()
     ser.close()
 
 
