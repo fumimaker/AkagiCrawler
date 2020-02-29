@@ -10,7 +10,7 @@ import os
 from objects import get_objects_information
 
 
-feedingSpeed = 2000
+feedingSpeed = 3500
 connect = "/dev/cu.usbserial-230"
 
 debug = False
@@ -230,13 +230,16 @@ def detectEnemyPos(rank):
             dic = objects_info_list[j]
             if dicMinusOne["x"] < dic["x"]:
                 objects_info_list[j-1], objects_info_list[j] = objects_info_list[j], objects_info_list[j-1]
-    dic = objects_info_list[rank]
+    try:
+        dic = objects_info_list[rank]
+    except:
+        dic = objects_info_list[0]
     print(objects_info_list)
     x = dic["x"]+(dic["width"]/2)
     y = dic["y"]+(dic["height"]/2)
     name = dic["predicted_name"]
     #return x-50, y+40, name, len(objects_info_list)
-    return x, y+80, name, len(objects_info_list)
+    return x, y+120, name, len(objects_info_list)
 
 
 def detectEnemy():
@@ -290,6 +293,7 @@ def main():
     servoUp()
     setZeroPosition()
     while 1:
+        time.sleep(3)
         print("ステージセレクト")
         touch(stageSelect)
         print("出撃確認")
@@ -307,10 +311,9 @@ def main():
             contactFlg = False
             enemyFlg = True
             while state != 5:
-                time.sleep(2)
-
+                time.sleep(4)
                 if enemyFlg:
-                    x, y, name, length = detectEnemyPos(0)
+                    x, y, name, length = detectEnemyPos(failCounter)
                     print(x, y)
                     #_list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
                     _list = [(x)*displayScale, (y)*displayScale]
@@ -333,19 +336,14 @@ def main():
                     state = 7
                     touch(kaihi)
                     changeFlag = False
+                    enemyFlg = True
                     infoFlg = False
                     move(0, 0)
                 else:
                     # 敵飛行機検知になったら
                     print("敵飛行機検知になった，もしくはタップ失敗")
                     move(0, 0)
-                    x, y, name, length = detectEnemyPos(0)
-                    print(x, y)
-                    #_list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
-                    _list = [(x)*displayScale, (y)*displayScale]
-                    print("{} detected. Touch X:{:.2f} Y:{:.2f}".format(
-                        name, _list[0], _list[1]))
-                    touch(_list)
+
                     failCounter += 1
                     # touch(hensei)
                     infoFlg = True
@@ -370,10 +368,10 @@ def main():
                 print("waiting for victory...")
                 time.sleep(1)
             print("戦闘終了確認")
-            touch(touchany)  # 完全勝利確認
+            touch(confirm)  # 完全勝利確認
             time.sleep(1)
             print("アイテム入手確認")
-            touch(touchany)  # アイテム入手確認
+            touch(confirm)  # アイテム入手確認
             time.sleep(2)
             print("End")
             touch(confirm)
