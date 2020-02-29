@@ -9,10 +9,12 @@ from yolo import YOLO
 import os
 from objects import get_objects_information
 
-feedingSpeed = 3000
-connect = "/dev/cu.usbserial-30"
+
+feedingSpeed = 2000
+connect = "/dev/cu.usbserial-230"
 
 debug = False
+
 #debug = True
 ser = None
 '''
@@ -22,19 +24,40 @@ syutsugeki = [2348, 1170]
 fleetSelect = [2624, 1357]
 '''
 
-origin = [125, 83]
-stageSelect = [800, 450]
-syutsugeki = [1176, 584]
-fleetSelect = [1315, 680]
-hensei = [1467, 714]
-kaihi = [1385, 536]
-touchany = [500, 500]
-confirm = [1323, 738]
 
+origin = [125, 83]
+#stageSelect = [800, 450]
+stageSelect = [800, 490]
+#syutsugeki = [1176, 584]
+syutsugeki = [1176, 624]
+#fleetSelect = [1315, 680]
+fleetSelect = [1315, 720]
+# hensei = [1467, 714]
+hensei = [1467, 754]
+#kaihi = [1385, 536]
+kaihi = [1385, 576]
+touchany = [500, 500]
+#confirm = [1323, 738]
+confirm = [1323, 778]
+#info = [839, 590]
+info = [839, 630]
+
+imagecnt = 0
 # pixelRatio = 22.4
 pixelRatio = 11.3
 displayScale = 0.58333
 state = 0
+
+files = os.listdir("./cropedShot/")
+print(files)
+filename = []
+for f in files:
+    tmp = f.strip(".jpg")
+    tmp = tmp.strip("croped")
+    filename.append(int(tmp))
+print(filename)
+filename.sort(reverse=True)
+print(filename)
 yolo = YOLO()
 
 def debugMode():
@@ -47,15 +70,18 @@ def debugMode():
     '''
     locale = get_locate_from_filename("azurenImg/machibuse.png")
     if locale == None:
-        touch(hensei)
+        touch(confirm)
     else:
         touch(kaihi)
+    
     move(0, 0)
+
 
 def scalingAndOffset(cord):
     _x, _y = cord
     _list = [(_x-origin[0])*displayScale, (_y-origin[1])*displayScale]
     return _list
+
 
 def checkOK():
     flg = 1
@@ -66,7 +92,6 @@ def checkOK():
             tmp2 = ser.readline()
             if tmp2 == b"ok\r\n":
                 flg = 0
-                print()
 
 
 def servoUp():
@@ -135,7 +160,7 @@ def get_locate_from_filename(filename):
     times = 0
     flag = True
     while flag:
-        time.sleep(1)
+        time.sleep(0.5)
         # グレイスケールで検索(95%一致で判定)
         locate = pyautogui.locateCenterOnScreen(
             filename, grayscale=True, confidence=0.9)
@@ -160,18 +185,62 @@ def enemy():
     touch(_list)
     return x, y, name
 
-def detectEnemy():
-    
+
+def detectEnemyPos(rank):
+    print("ScreenShot.")
     sc = pyautogui.screenshot()
     sc = sc.convert("RGB")
     sc.save("shot.jpg")
     img = cv2.imread("shot.jpg")
     img2 = img[45: 1595, 0: 3360]
-    cv2.imwrite("croped.jpg", img2)
-    image_path = "croped.jpg"
-    objects_info_list = get_objects_information(yolo, image_path)
+    global imagecnt
+
     
-    img = Image.open(image_path)
+    _filenameString = "cropedShot/croped"+str(imagecnt+filename[0]+1)+".jpg"
+    imagecnt+=1
+    cv2.imwrite(_filenameString, img2)
+    print("detecting enemy.")
+    objects_info_list = get_objects_information(yolo, _filenameString)
+
+    img = Image.open(_filenameString)
+    _gx = []
+    counter = 0
+    for object_info in objects_info_list:
+        class_name = object_info['predicted_name']
+        x = object_info['x']
+        y = object_info['y']
+        width = object_info['width']
+        height = object_info['height']
+        print("{} x:{} y:{} height:{} width:{}".format(
+            class_name, x, y, height, width))
+        counter += 1
+    
+    length = len(objects_info_list)
+    for i in range(length):
+        for j in reversed(range(i+1, length)):
+            dicMinusOne = objects_info_list[j-1]
+            dic = objects_info_list[j]
+            if dicMinusOne["x"] < dic["x"]:
+                objects_info_list[j-1], objects_info_list[j] = objects_info_list[j], objects_info_list[j-1]
+    dic = objects_info_list[rank]
+    print(objects_info_list)
+    x = dic["x"]+(dic["width"]/2)
+    y = dic["y"]+(dic["height"]/2)
+    name = dic["predicted_name"]
+    return x-60, y+80, name, len(objects_info_list)
+
+
+def detectEnemy():
+    sc = pyautogui.screenshot()
+    sc = sc.convert("RGB")
+    sc.save("shot.jpg")
+    img = cv2.imread("shot.jpg")
+    img2 = img[45: 1595, 0: 3360]
+    _filenameString = "cropedShot/croped"+str(imageCounter)+".jpg"
+    cv2.imwrite(_filenameString, img2)
+    objects_info_list = get_objects_information(yolo, _filenameString)
+    
+    img = Image.open(_filenameString)
     _gx = []
     _gy = []
     counter = 0
@@ -219,37 +288,68 @@ def main():
         print("艦隊選択")
         touch(fleetSelect)
         move(0, 0)
-
         completed = False
         while not completed:
+            failCounter = 0
             time.sleep(5)
             state = 0
+            changeFlag = False
+            infoFlg = False
+            contactFlg = False
+            enemyFlg = True
             while state != 5:
-                x, y, name = enemy()
-                time.sleep(5)
+                time.sleep(2)
+
+                if enemyFlg:
+                    x, y, name, length = detectEnemyPos(failCounter)
+                    _list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
+                    print("{} detected. Touch X:{:.2f} Y:{:.2f}".format(
+                        name, _list[0], _list[1]))
+                    touch(_list)
+                    time.sleep(5)
+
                 print("状況確認")
                 if get_locate_from_filename("azurenImg/syutugeki.png") != None: 
                     # 出撃確認になっていたら
                     print("出撃確認になっていた")
                     state = 4
+                    infoFlg = False
                     touch(hensei)
+                    contactFlg = True
                 elif get_locate_from_filename("azurenImg/machibuse.png") != None:
                     # 待ち伏せ艦隊検知になっていたら
                     print("待ち伏せ艦隊検知になっていた")
                     state = 7
                     touch(kaihi)
+                    changeFlag = False
+                    infoFlg = False
                     move(0, 0)
                 else:
                     # 敵飛行機検知になったら
-                    print("敵飛行機検知になった")
+                    print("敵飛行機検知になった，もしくはタップ失敗")
                     move(0, 0)
+                    x, y, name, length = detectEnemyPos(failCounter)
+                    _list = [(x-origin[0])*displayScale,
+                             (y-origin[1])*displayScale]
+                    print("{} detected. Touch X:{:.2f} Y:{:.2f}".format(
+                        name, _list[0], _list[1]))
+                    touch(_list)
+                    failCounter += 1
                     # touch(hensei)
+                    infoFlg = True
+                    #enemyFlg = False
 
-                
-                if get_locate_from_filename("azurenImg/contact.png") != None:
-                    # 戦闘開始していたら
-                    print("戦闘開始していた")
-                    state = 5
+                if infoFlg:
+                    if get_locate_from_filename("azurenImg/info.png") != None:
+                            print("INFO detect")
+                            touch(info)
+
+                if contactFlg:
+                    if get_locate_from_filename("azurenImg/contact.png") != None:
+                        # 戦闘開始していたら
+                        print("戦闘開始していた")
+                        state = 5
+                        failCounter = 0
             move(0, 0)
 
 
