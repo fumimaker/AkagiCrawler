@@ -27,20 +27,21 @@ fleetSelect = [2624, 1357]
 
 origin = [125, 83]
 #stageSelect = [800, 450]
-stageSelect = [800, 490]
+stageSelect = [800, 470]
 #syutsugeki = [1176, 584]
-syutsugeki = [1176, 624]
+syutsugeki = [1176, 604]
 #fleetSelect = [1315, 680]
-fleetSelect = [1315, 720]
-# hensei = [1467, 714]
-hensei = [1467, 754]
+fleetSelect = [1315, 700]
+#hensei = [1467, 714]
+hensei = [1467, 734]
 #kaihi = [1385, 536]
-kaihi = [1385, 576]
+kaihi = [1385, 556]
 touchany = [500, 500]
 #confirm = [1323, 738]
-confirm = [1323, 778]
+confirm = [1323, 758]
 #info = [839, 590]
-info = [839, 630]
+
+info = [839, 610]
 
 imagecnt = 0
 # pixelRatio = 22.4
@@ -311,7 +312,7 @@ def main():
             contactFlg = False
             enemyFlg = True
             while state != 5:
-                time.sleep(4)
+                time.sleep(1)
                 if enemyFlg:
                     x, y, name, length = detectEnemyPos(failCounter)
                     print(x, y)
@@ -339,11 +340,11 @@ def main():
                     enemyFlg = True
                     infoFlg = False
                     move(0, 0)
+                    time.sleep(5)
                 else:
                     # 敵飛行機検知になったら
                     print("敵飛行機検知になった，もしくはタップ失敗")
                     move(0, 0)
-
                     failCounter += 1
                     # touch(hensei)
                     infoFlg = True
