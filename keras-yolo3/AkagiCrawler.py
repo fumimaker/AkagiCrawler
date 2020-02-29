@@ -45,7 +45,7 @@ info = [839, 630]
 imagecnt = 0
 # pixelRatio = 22.4
 pixelRatio = 11.3
-displayScale = 0.58333
+displayScale = 0.5
 state = 0
 
 files = os.listdir("./cropedShot/")
@@ -61,19 +61,26 @@ print(filename)
 yolo = YOLO()
 
 def debugMode():
+    x, y , name , len = detectEnemyPos(0)
+    print(x, y)
+    #_list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
+    _list = [(x)*displayScale, (y)*displayScale]
+    print("{} detected. Touch X:{:.2f} Y:{:.2f}".format(
+        name, _list[0], _list[1]))
+    touch(_list)
     '''
     x, y = detectEnemy()
     _list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
     print(_list)
     touch(_list)
     move(0, 0)
-    '''
+    
     locale = get_locate_from_filename("azurenImg/machibuse.png")
     if locale == None:
         touch(confirm)
     else:
         touch(kaihi)
-    
+    '''
     move(0, 0)
 
 
@@ -180,6 +187,7 @@ def enemy():
     print("Yolo: 検出開始")
     x, y, name = detectEnemy()
     _list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
+    #_list = [(x)*displayScale, (y)*displayScale]
     print("{} detected. Touch X:{:.2f} Y:{:.2f}".format(
         name, _list[0], _list[1]))
     touch(_list)
@@ -227,7 +235,8 @@ def detectEnemyPos(rank):
     x = dic["x"]+(dic["width"]/2)
     y = dic["y"]+(dic["height"]/2)
     name = dic["predicted_name"]
-    return x-60, y+80, name, len(objects_info_list)
+    #return x-50, y+40, name, len(objects_info_list)
+    return x, y+80, name, len(objects_info_list)
 
 
 def detectEnemy():
@@ -301,8 +310,10 @@ def main():
                 time.sleep(2)
 
                 if enemyFlg:
-                    x, y, name, length = detectEnemyPos(failCounter)
-                    _list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
+                    x, y, name, length = detectEnemyPos(0)
+                    print(x, y)
+                    #_list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
+                    _list = [(x)*displayScale, (y)*displayScale]
                     print("{} detected. Touch X:{:.2f} Y:{:.2f}".format(
                         name, _list[0], _list[1]))
                     touch(_list)
@@ -328,16 +339,18 @@ def main():
                     # 敵飛行機検知になったら
                     print("敵飛行機検知になった，もしくはタップ失敗")
                     move(0, 0)
-                    x, y, name, length = detectEnemyPos(failCounter)
-                    _list = [(x-origin[0])*displayScale,
-                             (y-origin[1])*displayScale]
+                    x, y, name, length = detectEnemyPos(0)
+                    print(x, y)
+                    #_list = [(x-origin[0])*displayScale, (y-origin[1])*displayScale]
+                    _list = [(x)*displayScale, (y)*displayScale]
                     print("{} detected. Touch X:{:.2f} Y:{:.2f}".format(
                         name, _list[0], _list[1]))
                     touch(_list)
                     failCounter += 1
                     # touch(hensei)
                     infoFlg = True
-                    #enemyFlg = False
+                    #enemyFlg = True
+                    contactFlg = True
 
                 if infoFlg:
                     if get_locate_from_filename("azurenImg/info.png") != None:

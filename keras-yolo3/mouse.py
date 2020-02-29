@@ -18,8 +18,10 @@ print(x)
 
 
 while True:
+    '''
         filename = "azurenImg/info.png"
         locate = pyautogui.locateCenterOnScreen(
             filename, grayscale=True, confidence=0.9)
         print(locate)
-        print(pyautogui.position())
+        '''
+    print(pyautogui.position())
