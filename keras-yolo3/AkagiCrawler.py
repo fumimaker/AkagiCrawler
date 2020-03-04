@@ -10,7 +10,7 @@ import os
 from objects import get_objects_information
 
 
-feedingSpeed = 3500
+feedingSpeed = 3000
 connect = "/dev/cu.usbserial-230"
 
 debug = False
@@ -48,6 +48,7 @@ imagecnt = 0
 pixelRatio = 11.3
 displayScale = 0.5
 state = 0
+runCounter = 0
 
 files = os.listdir("./cropedShot/")
 print(files)
@@ -168,7 +169,6 @@ def get_locate_from_filename(filename):
     times = 0
     flag = True
     while flag:
-        time.sleep(0.5)
         # グレイスケールで検索(95%一致で判定)
         locate = pyautogui.locateCenterOnScreen(
             filename, grayscale=True, confidence=0.9)
@@ -177,7 +177,7 @@ def get_locate_from_filename(filename):
         times += 1
         if not locate == None:
             flag = False
-        if times > 5:
+        if times > 3:
             locate = None
             flag = False
     print("Detect image. {}".format(locate))
@@ -331,6 +331,7 @@ def main():
                     infoFlg = False
                     touch(hensei)
                     contactFlg = True
+                    time.sleep(5)
                 elif get_locate_from_filename("azurenImg/machibuse.png") != None:
                     # 待ち伏せ艦隊検知になっていたら
                     print("待ち伏せ艦隊検知になっていた")
@@ -344,12 +345,23 @@ def main():
                 else:
                     # 敵飛行機検知になったら
                     print("敵飛行機検知になった，もしくはタップ失敗")
-                    move(0, 0)
-                    failCounter += 1
-                    # touch(hensei)
-                    infoFlg = True
-                    #enemyFlg = True
-                    contactFlg = True
+                    servoDown()
+                    servoUp()
+                    if get_locate_from_filename("azurenImg/syutugeki.png") != None:
+                        # 出撃確認になっていたら
+                        print("出撃確認になっていた")
+                        state = 4
+                        infoFlg = False
+                        touch(hensei)
+                        contactFlg = True
+                        time.sleep(5)
+                    else:
+                        move(0, 0)
+                        failCounter += 1
+                        # touch(hensei)
+                        infoFlg = True
+                        #enemyFlg = True
+                        contactFlg = True
 
                 if infoFlg:
                     if get_locate_from_filename("azurenImg/info.png") != None:
@@ -377,12 +389,17 @@ def main():
             print("End")
             touch(confirm)
             move(0, 0)
+            global runCounter
             if name == "boss":
                 completed = True
                 print("ボス撃破，終了")
+                print("周回カウンタ　{}週目".format(runCounter))
+                runCounter += 1
             else:
                 print("{} 撃破".format(name))
                 print("敵検索継続")
+                print("周回カウンタ　{}週目".format(runCounter))
+
     yolo.close_session()
     ser.close()
 
