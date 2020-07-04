@@ -4,6 +4,11 @@
 果てしなく限界な動作なので動いている様子をみてください．
 https://twitter.com/fumi_maker/status/1233750592582897665
 
+# How does it work?
+iPhoneの画面をpyautoguiでキャプチャしてKerasYOLOV3で学習したモデルよりシーン判別，自分がゲームないのどこのステートメントにいるかを識別します．シーン判別をすると次にタッチする場所をXYプロッタによりタッチします．あらかじめ登録された座標よりGcodeを生成し，XYプロッタを動作させます．  
+
+**AIが代わりにゲームを進めてくれます（？）**
+
 # Requirement
 
 MBP2018Late 15inch MacOSX Mojave
@@ -68,7 +73,7 @@ MBP2018Late 15inch MacOSX Mojave
 
 https://twitter.com/fumi_maker/status/1233750592582897665
 
-# How does it work
+# How to use
 
 1. 敵キャラがいる海域の画面をたくさんキャプチャ
 2. VOTTでアノテーション
