@@ -3,7 +3,8 @@
 
 アズレンのアカギを絶対に出したいために始まったプロジェクト．完全にオレオレ仕様なので流用できないと思うけど一応公開しておく．もし使ってみたいという声があれば整備するかもしれない．
 果てしなく限界な動作なので動いている様子をみてください．
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SH_bN1YbX0w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![](http://img.youtube.com/vi/SH_bN1YbX0w/0.jpg)](http://www.youtube.com/watch?v=SH_bN1YbX0w "AkagiCrawler")
 
 # How does it work?
 iPhoneの画面をpyautoguiでキャプチャしてKerasYOLOV3で学習したモデルよりシーン判別，自分がゲームないのどこのステートメントにいるかを識別します．シーン判別をすると次にタッチする場所をXYプロッタによりタッチします．認識したキャラクターの座標よりGcodeを自動生成し送信，XYプロッタを動作させます．  
