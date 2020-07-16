@@ -1,5 +1,6 @@
 # AkagiClawler
-![trim_7B661DAF-7301-4F50-BCA1-EE6E1A696B7B 5](https://user-images.githubusercontent.com/25518367/87650220-44b0ae80-c78c-11ea-9a94-9aefd21a9dab.gif)
+![trim_7B661DAF-7301-4F50-BCA1-EE6E1A696B7B](https://user-images.githubusercontent.com/25518367/87651799-55faba80-c78e-11ea-9ebf-a5a5792f87f7.gif)
+
 アズレンのアカギを絶対に出したいために始まったプロジェクト．完全にオレオレ仕様なので流用できないと思うけど一応公開しておく．もし使ってみたいという声があれば整備するかもしれない．
 果てしなく限界な動作なので動いている様子をみてください．
 
