@@ -1,4 +1,4 @@
-# AkagiClawler
+# AkagiCrawler
 ![trim_7B661DAF-7301-4F50-BCA1-EE6E1A696B7B](https://user-images.githubusercontent.com/25518367/87651799-55faba80-c78e-11ea-9ebf-a5a5792f87f7.gif)
 
 ## プロジェクト概要
@@ -70,5 +70,5 @@ https://twitter.com/fumi_maker/status/1233750592582897665
    1. マルチモニターの場合はPyautoguiでスクショを撮っている関係でメイン画面をMacにしてください．
    2. QuickTimeを最大化ではない一番大きい状態にして両端がぴったり画面に着くようにする．
    3. 上辺はメニューバーにぴったり着くようにする．
-7. 原点を合わせて./keras-yolo/AkagiClawler.pyを実行する
+7. 原点を合わせて./keras-yolo3/AkagiCrawler.pyを実行する
 8. 色々例外処理しながら動いているので判定が遅いですが暖かい目で見守ってあげましょう．
